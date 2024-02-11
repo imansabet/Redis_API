@@ -32,6 +32,7 @@ namespace Redis_API.Controllers
             _repo.CreatePlatform(platform);
             return CreatedAtRoute(nameof(GetPlatformById),new { Id = platform.Id }, platform);
         }
+       
 
     }
 }
