@@ -1,0 +1,14 @@
+version: '3.4'
+
+services:
+  redis_api:
+    image: ${DOCKER_REGISTRY-}redisapi
+    build:
+      context: .
+      dockerfile: Redis_API/Dockerfile
+  redis : 
+    image: redis
+    container_name: redis_api
+    ports:
+     - "6379:6379"
+  
